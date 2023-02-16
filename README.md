@@ -1,0 +1,2 @@
+# djgallery
+Django excersises
