@@ -1,0 +1,11 @@
+{% if album_list %}
+    <ul>
+    {% for album in album_list %}
+        <li><a href="/gallery/{{album.id}}">{{album.title}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    No albums available.
+{% endif %}
+
+{% if owner %} <a href="/gallery/create_album/">Create new album</a> {% endif %}
