@@ -1,7 +1,10 @@
 {% if album_list %}
     <ul>
     {% for album in album_list %}
-        <li><a href="/gallery/{{album.id}}">{{album.title}}</a></li>
+        <li>
+            <div><a href="/gallery/{{album.id}}">{{album.title}}</a></div>
+            <div>{{album.description}}</div>
+        </li>
     {% endfor %}
     </ul>
 {% else %}

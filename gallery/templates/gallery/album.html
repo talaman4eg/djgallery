@@ -1,0 +1,16 @@
+{% if album %}
+<h1>{{album.title}}</h1>
+<p>{{album.description}}</p>
+<p>Contains {{photos_count}} photos</p>
+{% if photos %}
+    <ul>
+    {% for photo in photos %}
+        <li>
+            <div>{{photo.photo.url}}</div>
+            <div><img src="{{photo.photo.url}}" alt="{{photo.title}}" /></div>
+            <div>{{photo.description}}</div>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endif %}
